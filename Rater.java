@@ -1,4 +1,3 @@
-
 /**
  * Provides basic Rater fields and methods to uniquely identify different users
  * allow convenient interactivity between Rater objects and Movie objects.
@@ -57,5 +56,11 @@ public class Rater {
         }
         
         return list;
+    }
+
+    // Returns a string of the rater's information
+    public String toString() {
+        String result = "Rater id=" + myID;
+        return result;
     }
 }

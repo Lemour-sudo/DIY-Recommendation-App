@@ -1,4 +1,3 @@
-
 /**
  * Provides basic Rating fields and methods to appropriately handle rating items.
  * This includes handling comparisons between different ratings objects as it can
@@ -7,7 +6,6 @@
  * @author Tshepo Mosoeunyane 
  * @version 11-5-2021
  */
-
 
 // An immutable passive data object (PDO) to represent the rating data
 public class Rating implements Comparable<Rating> {

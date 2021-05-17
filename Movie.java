@@ -1,4 +1,3 @@
-
 /**
  * Template for defining Movie objects with the necessary fields accounted for
  * for proper interaction with other classes.
@@ -62,19 +61,19 @@ public class Movie {
         return genres;
     }
 
-    public String getCountry(){
+    public String getCountry() {
         return country;
     }
 
-    public String getDirector(){
+    public String getDirector() {
         return director;
     }
 
-    public String getPoster(){
+    public String getPoster() {
         return poster;
     }
 
-    public int getMinutes(){
+    public int getMinutes() {
         return minutes;
     }
 
