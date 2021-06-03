@@ -22,7 +22,7 @@ public class Rater {
     }
 
     public boolean hasRating(String item) {
-        for(int k=0; k < myRatings.size(); k++){
+        for(int k = 0; k < myRatings.size(); k++){
             if (myRatings.get(k).getItem().equals(item)){
                 return true;
             }
@@ -36,7 +36,7 @@ public class Rater {
     }
 
     public double getRating(String item) {
-        for(int k=0; k < myRatings.size(); k++){
+        for(int k = 0; k < myRatings.size(); k++){
             if (myRatings.get(k).getItem().equals(item)){
                 return myRatings.get(k).getValue();
             }
@@ -51,7 +51,7 @@ public class Rater {
 
     public ArrayList<String> getItemsRated() {
         ArrayList<String> list = new ArrayList<String>();
-        for(int k=0; k < myRatings.size(); k++){
+        for(int k = 0; k < myRatings.size(); k++){
             list.add(myRatings.get(k).getItem());
         }
         
