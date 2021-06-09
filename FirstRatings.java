@@ -35,9 +35,9 @@ public class FirstRatings {
         return movies;
     }
 
-    public ArrayList<Rater> loadRaters(String filename) {
-        ArrayList<Rater> result = new ArrayList<Rater>();
-        HashMap<String,Rater> raters = new HashMap<String,Rater>();
+    public ArrayList<EfficientRater> loadRaters(String filename) {
+        ArrayList<EfficientRater> result = new ArrayList<EfficientRater>();
+        HashMap<String,EfficientRater> raters = new HashMap<String,EfficientRater>();
         FileResource fr = new FileResource(filename);
         CSVParser parser = fr.getCSVParser();
 
@@ -46,21 +46,21 @@ public class FirstRatings {
             String item = record.get("movie_id");
             Double rating = Double.parseDouble(record.get("rating"));
 
-            Rater raterRecord;
+            EfficientRater raterRecord;
 
             if (raters.containsKey(id)) {
                 raterRecord = raters.get(id);
                 
             }
             else {
-                raterRecord = new Rater(id);
+                raterRecord = new EfficientRater(id);
             }
 
             raterRecord.addRating(item, rating);
             raters.put(id, raterRecord);
         }
 
-        for (Rater raterRecord : raters.values()) {
+        for (EfficientRater raterRecord : raters.values()) {
             result.add(raterRecord);
         }
 
@@ -169,7 +169,7 @@ public class FirstRatings {
     public void testLoadRaters() {
         String filename = "data/ratings.csv";
 
-        ArrayList<Rater> raters = loadRaters(filename);
+        ArrayList<EfficientRater> raters = loadRaters(filename);
         
         // System.out.println("Raters found:");
         // for (Rater raterItem : raters) {
@@ -179,7 +179,7 @@ public class FirstRatings {
 
         String queryRater = "193";
         int rater193 = 0;
-        for (Rater raterItem : raters) {
+        for (EfficientRater raterItem : raters) {
             if (raterItem.getID().equals(queryRater)) {
                 rater193 = raterItem.numRatings();
             }
@@ -187,9 +187,9 @@ public class FirstRatings {
         System.out.println("\nRater 193 has " + rater193 + " rating(s).");
         
 
-        ArrayList<Rater> maxRaters = new ArrayList<Rater>();
+        ArrayList<EfficientRater> maxRaters = new ArrayList<EfficientRater>();
         int maxRatings = 0;
-        for (Rater raterItem : raters) {
+        for (EfficientRater raterItem : raters) {
             int numRatings = raterItem.numRatings();
             if (numRatings >= maxRatings) {
                 if (numRatings > maxRatings) {

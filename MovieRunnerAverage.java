@@ -14,6 +14,9 @@ public class MovieRunnerAverage {
         SecondRatings secondR = new SecondRatings(
             "data/ratedmoviesfull.csv", "data/ratings.csv"
         );
+        ThirdRatings thirdR = new ThirdRatings(
+            "data/ratings.csv"
+        );
 
         int numMovies = secondR.getMovieSize();
         int numRaters = secondR.getRaterSize();
@@ -27,11 +30,11 @@ public class MovieRunnerAverage {
 
         System.out.println();
         System.out.println(averageRatings.size() + " movie(s) have atleast " + minimalRaters + " ratings");
-        for (Rating ratingItem : averageRatings) {
-            String title = secondR.getTitle(ratingItem.getItem());
-            double value = ratingItem.getValue();
-            System.out.println(value + " " + title);
-        }
+        // for (Rating ratingItem : averageRatings) {
+        //     String title = secondR.getTitle(ratingItem.getItem());
+        //     double value = ratingItem.getValue();
+        //     System.out.println(value + " " + title);
+        // }
     }
 
     public void getAverageRatingOneMovie(String title) {
