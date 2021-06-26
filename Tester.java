@@ -1,37 +1,27 @@
 public class Tester {
     public static void main(String[] args) {
-        FirstRatings fileR = new FirstRatings();
-        MovieRunnerAverage movieAvg = new MovieRunnerAverage();
         MovieRunnerWithFilters movieAvgFilt = new MovieRunnerWithFilters();
+        MovieRunnerSimilarRatings movieRun = new MovieRunnerSimilarRatings();
 
-        // // testLoadMovies
-        // fileR.testLoadMovies();
+        // // test printAverageRatings 
+        // movieRun.printAverageRatings();
 
-        // // testLoadRaters
-        // fileR.testLoadRaters();
+        // // test printAverageRatingsByYearAfterAndGenre 
+        // movieRun.printAverageRatingsByYearAfterAndGenre();
 
-        // // test printAverageRatings
-        // movieAvgFilt.printAverageRatings();
-        
-        // // test getAverageRatingOneMovie
-        // movieAvg.getAverageRatingOneMovie("Vacation");
+        // // test printSimilarRatings 
+        // movieRun.printSimilarRatings();
 
-        // // test printAverageRatingsByYear
-        // movieAvgFilt.printAverageRatingsByYear();
+        // // test printSimilarRatingsByGenre 
+        // movieRun.printSimilarRatingsByGenre();
 
-        // // test printAverageRatingsByGenre
-        // movieAvgFilt.printAverageRatingsByGenre();
-        
-        // // test printAverageRatingsByMinutes
-        // movieAvgFilt.printAverageRatingsByMinutes();
+        // // test printSimilarRatingsByDirector  
+        // movieRun.printSimilarRatingsByDirector();
 
-        // // test printAverageRatingsByDirectors
-        // movieAvgFilt.printAverageRatingsByDirectors();
+        // // test printSimilarRatingsByGenreAndMinutes   
+        // movieRun.printSimilarRatingsByGenreAndMinutes();
 
-        // // test printAverageRatingsByYearAfterAndGenre
-        // movieAvgFilt.printAverageRatingsByYearAfterAndGenre();
-
-        // test printAverageRatingsByDirectorsAndMinutes 
-        movieAvgFilt.printAverageRatingsByDirectorsAndMinutes();
+        // test printSimilarRatingsByYearAfterAndMinutes   
+        movieRun.printSimilarRatingsByYearAfterAndMinutes();
     }
 }
