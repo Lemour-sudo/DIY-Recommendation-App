@@ -2,17 +2,17 @@ import java.util.*;
 
 public class FourthRatings {
 
-    private double dotProduct(Rater me, Rater r) {
-        ArrayList<String> meRatings = me.getItemsRated();
-        ArrayList<String> rRatings = r.getItemsRated();
+    private double dotProduct(Rater currRater, Rater otherRater) {
+        ArrayList<String> currRatedItems = currRater.getItemsRated();
+        ArrayList<String> otherRatedItems = otherRater.getItemsRated();
         double result = 0.0;
         double scale = 5.0;
 
-        for (String meRate : meRatings) {
-            if (rRatings.contains(meRate)) {
-                double scaledMeRate = me.getRating(meRate) - scale;
-                double scaledRRate = r.getRating(meRate) - scale;
-                result += scaledMeRate * scaledRRate;
+        for (String currRatedItem : currRatedItems) {
+            if (otherRatedItems.contains(currRatedItem)) {
+                double scaledCurrRate = currRater.getRating(currRatedItem) - scale;
+                double scaledOtherRate = otherRater.getRating(currRatedItem) - scale;
+                result += scaledCurrRate * scaledOtherRate;
             }
         }
 
